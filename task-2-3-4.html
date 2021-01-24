@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Задания с 2 по 4 </title>
+	<title>Задания с 2 по 4 Todorova Natalilya Jgorevna</title>
 
 <script>
 // Задание 2
@@ -41,9 +41,21 @@ alert ('Минимальный элемен  второй вариант  = ' + 
 function getEven( arr ) {
   return arr.filter( item => !(item % 2));
  } 
-
-// alert(getEven( arr_number ));
  document.write('<br> Четные элементы массива '+ getEven( arr));
+ 
+let rezChet = [];
+let с=0;
+function myChet(arr) { 
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] % 2 == 0) {
+   rezChet[с] =  arr[ i ]; с++;
+  }
+}
+return(rezChet);
+} 
+myChet(arr);
+alert(' 2-Вариант '+rezChet);
 
 
 
@@ -56,7 +68,7 @@ let users = [
   { name: 'Andrew', birthDate:'2011-05-09'},
   
 ];
-
+alert(users[0].name+''+users[0].birthDate);
 let result=[];
 
 let j=0;
@@ -74,8 +86,32 @@ function seachByName(name) {
 }
 
 seachByName('Andrew');
-
+for (let name of result) {
+ document.write( `<br> ЭТО: ${name}. ` ); 
+}
 console.dir(result);
+
+ document.write( `<br> ` ); 
+function print2(arg) {
+  
+    // document.write(`${i}=${user[i]} <br>`);
+    for (var i = 0; i < users.length; i++) { 
+        for (let key in result[i]) {          
+        document.write(` ${key} = ${result[i][key]}`);           
+        }
+        document.write( `<br> ` );  
+    }
+} 
+  print2(result);
+
+function print(arg) {
+    for (var i = 0; i < users.length; i++) { 
+    document.write("<br>" + i + " " + result[i].name + " " + result[i].birthDate);
+     }
+  } 
+  print(result);
+
+
 </script>
 </head>
 <body>
